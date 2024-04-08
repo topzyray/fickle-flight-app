@@ -11,10 +11,10 @@ const Hero = () => {
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backroundBlendMode: 'multiply',
-        height: '84vh',
+        // height: '84vh',
         width: '100%',
       }}
-      className="flex justify-center items-center px-6 md:px-10 lg:px-28"
+      className="flex justify-center items-center py-20 md:py-44 px-6 md:px-10 lg:px-28"
       // className="bg-hero bg-cover h-full w-full bg-gradient-to-r from-[#114F8B] to-[#2A9AD7] bg-blend-multiply"
     >
       <div className="w-full flex flex-col gap-11">
@@ -40,6 +40,7 @@ const Hero = () => {
                   id="type"
                   className="mr-1 sm:mr-2"
                   checked
+                  readOnly
                 />
                 Return
               </label>
