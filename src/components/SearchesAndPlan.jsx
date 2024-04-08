@@ -29,12 +29,13 @@ const RecentSearch = ({ start, end, date }) => {
   );
 };
 
-const PlanTrip = ({ icon, iconBg, text }) => {
+const PlanTrip = ({ icon, style, text }) => {
   return (
     <>
       <div className="flex flex-col items-center text-center">
         <div
-          className={`bg-[${iconBg}] text-white rounded-2xl p-3 text-2xl sm:text-3xl`}
+          className={`text-white rounded-2xl p-3 text-2xl sm:text-3xl`}
+          style={style}
         >
           {icon}
         </div>
@@ -61,11 +62,17 @@ const SearchesAndPlan = () => {
           Prepare for your trip
         </h2>
         <div className="flex flex-wrap justify-center sm:justify-between items-center  gap-4">
+          {/* <PlanTrip icon={<IoBed />} color="#F9668D" text="Hotel" />
+          <PlanTrip icon={<IoTicket />} color="#FF9B53" text="Attractions" />
+          <PlanTrip icon={<PiForkKnifeFill />} color="#36DA76" text="Eats" />
+          <PlanTrip icon={<FaTrainSubway />} color="#FDBF00" text="Commute" />
+          <PlanTrip icon={<FaTaxi />} color="#4DABFF" text="Taxi" />
+          <PlanTrip icon={<BiSolidMoviePlay />} color="#79CA00" text="Movie" /> */}
           {planData.map((plan) => (
             <PlanTrip
               key={plan.id}
               icon={plan.icon}
-              iconBg={plan.color}
+              style={{ backgroundColor: `${plan.color}` }}
               text={plan.text}
             />
           ))}

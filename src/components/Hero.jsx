@@ -1,6 +1,3 @@
-import React from 'react';
-import herobg from '../assets/images/hero-bg.png';
-
 const Hero = () => {
   return (
     <div
@@ -14,7 +11,7 @@ const Hero = () => {
         // height: '84vh',
         width: '100%',
       }}
-      className="flex justify-center items-center py-20 md:py-44 px-6 md:px-10 lg:px-28"
+      className="flex justify-center items-center py-[70px] md:py-44 px-6 md:px-10 lg:px-28"
       // className="bg-hero bg-cover h-full w-full bg-gradient-to-r from-[#114F8B] to-[#2A9AD7] bg-blend-multiply"
     >
       <div className="w-full flex flex-col gap-11">
@@ -100,8 +97,9 @@ const Hero = () => {
                     type="date"
                     name="date"
                     id="date"
+                    defaultValue="29/04/2024"
                     autoComplete=""
-                    className="input"
+                    className="input bg-transparent"
                   />
                 </div>
               </div>
